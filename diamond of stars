@@ -1,0 +1,33 @@
+n=5
+  *
+ ***
+*****
+ ***
+  *
+
+n=int(input())
+i=1
+p=n//2
+while i<=p:
+    sp=1
+    while sp<=(p-i+1):
+        print(' ',end='')
+        sp=sp+1
+    j=1
+    while j<=2*i-1:
+        print('*',end='')
+        j=j+1
+    print()
+    i=i+1
+k=0
+while k<=(n+1)/2:
+    l=1
+    while l<=k:
+        print(' ',end='')
+        l=l+1
+    m=1
+    while m<=(n-2*k):
+        print('*',end='')
+        m=m+1
+    print()
+    k=k+1
