@@ -1,0 +1,6 @@
+def printtree(root):
+    if root == None:
+        return
+    print(root.data)
+    for child in root.children:
+        printtree(child)
