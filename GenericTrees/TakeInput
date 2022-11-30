@@ -1,1 +1,16 @@
+class TreeNode:
+    def __init__(self,data):
+        self.data = data
+        self.children = list()
+def takeinput():
+    print("enter the data")
+    rootdata = int(input())
 
+    root = TreeNode(rootdata)
+
+    print("Enter the no. of children for:",rootdata)
+    childrencount = int(input())
+    for i in range(childrencount):
+        child = int(input())
+        root.children.append(child)
+    return root
