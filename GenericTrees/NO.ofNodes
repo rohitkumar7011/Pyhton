@@ -1,0 +1,7 @@
+def nodes(root):
+    if root is None:
+        return 0
+    count =  1
+    for child in root.child:
+        count = count+ nodes(child)
+    return count
