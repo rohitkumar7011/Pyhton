@@ -1,0 +1,11 @@
+def first(a,x,si):
+    l = len(a)
+    if si == l:
+        return -1
+    if a[si] == x:
+        return si
+    smallerlist = first(a,x,si+1)
+    return smallerlist
+a =[9,50,8,10,8]
+out = first(a,8,0)
+print(out)
