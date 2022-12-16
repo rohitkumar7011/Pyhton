@@ -1,0 +1,14 @@
+# xaxab = ab
+# abc =abc
+# xx =none
+def str(s,a):
+    if len(s) == 0:
+        return s
+    out = str(s[1:],a)
+    if s[0] == a:
+        return ''+ out
+    else:
+        return s[0] + out
+
+out = str("xaxb","x")
+print(out)
