@@ -1,1 +1,15 @@
+def __helper(self,sv,visited):
+    print(sv)
+    visited[sv] = True
+    for i in range(self.nvertices):
+        if(self.adjMatrix[sv][i]>0 and visited[i] is False):
+            self.__helper(i,visited)
 
+
+def dfs(self):
+    visited = [False for i in range(self.nvertices)]
+    self.__helper(0,visited)
+'''
+0:Left main 1 and right main 2
+1 se 3 connect hai or 2 se bhi 3 connect hai
+and at last 4 (2) se connect hai'''

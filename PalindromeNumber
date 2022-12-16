@@ -1,0 +1,23 @@
+
+def isPalindrome(x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        pal = x
+        rev = 0
+        
+        if x == 0:
+            return True
+        if x%10==0:
+            return False
+        while x>0:
+                rev = (rev*10) + x%10
+                x=x//10
+        if pal == rev:
+            return True
+        else:
+            return False
+             
+p = isPalindrome(123)
+print(p)     
