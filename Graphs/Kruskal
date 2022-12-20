@@ -4,10 +4,6 @@ class Edge:
         self.dest = dest
         self.wt  = wt
 
-
-
-
-
 li = [int(ele) for ele in input().split()]
 n = li[0]
 e = li[1]
