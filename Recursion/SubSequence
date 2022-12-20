@@ -1,0 +1,15 @@
+def subs(S):
+    if len(S)==0:
+        output = []
+        output.append("")
+        return output
+    smalleroutput = subs(S[1:])
+    out = []
+    for sub in smalleroutput:
+        out.append(sub)
+        out.append(S[0] + sub)
+    return out
+out = subs("abcd")
+print(out)
+
+# out : ['', 'a', 'b', 'ab', 'c', 'ac', 'bc', 'abc', 'd', 'ad', 'bd', 'abd', 'cd', 'acd', 'bcd', 'abcd']
