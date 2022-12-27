@@ -43,3 +43,8 @@ print(out)
 
 
 output : ['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']
+
+
+
+###############################################################################################################
+# This fact function just print the factorial of a number and returns nothing..
