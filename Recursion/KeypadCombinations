@@ -33,5 +33,10 @@ def subs(S):
         for s in optionForLastDigit:
             out.append(sub + s)
     return out
-out = subs(237)
-print(len(out))
+out = subs(23)
+print(out)
+
+
+
+
+output : ['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']
