@@ -48,3 +48,28 @@ output : ['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']
 
 ###############################################################################################################
 # This fact function just print the factorial of a number and returns nothing..
+
+def subs(S, O):
+    if S==0:
+        print(O)
+        return
+    smallnumber = S//10
+    remainingInt = S%10
+    optionForLastDigit = getDigit(remainingInt)
+
+    for sub in optionForLastDigit:
+        newOutput = sub + O
+        subs(smallnumber,newOutput)
+out = subs(23, '')
+
+
+out : 
+ad
+bd
+cd
+ae
+be
+ce
+af
+bf
+cf
