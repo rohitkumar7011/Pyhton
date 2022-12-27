@@ -1,3 +1,6 @@
+# This  is by just appending into the list and returning the list...
+
+
 def getDigit(d):
     if d == 2:
         return "abc"
