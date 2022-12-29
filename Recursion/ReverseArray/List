@@ -1,4 +1,7 @@
-#n = int(input())
+
+n = int(input())
+
+
 arr = []
 for i in range(n):
     arr.append(int(input()))
@@ -11,7 +14,3 @@ def reverseArray( arr , i, n):
     reverseArray(arr, i+1 , n)
     return arr
 out = reverseArray(arr , 0,n)
-print(out)
-
-#####
-out : 5 4 3 2 1

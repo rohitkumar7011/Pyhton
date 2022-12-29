@@ -1,0 +1,27 @@
+n = int(input())
+arr = []
+for i in range(n):
+    arr.append(int(input()))
+sum = 4
+li = []
+n = len(arr)
+index = 0
+s = 0
+def f(arr , index, n, sum, s,li):
+    if index == n:
+        if s == sum:
+            
+            print(li,end= ' ')
+            print()
+        return
+    li.append(arr[index])
+    s += arr[index]
+    f(arr, index+1, n, sum ,s,li)
+    li.remove(arr[index])
+    s -= arr[index]
+    f(arr, index+1, n, sum ,s, li)
+    return li
+f(arr, index, n, sum , s, li)
+
+
+
