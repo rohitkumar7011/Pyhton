@@ -1,0 +1,14 @@
+n = int(input())
+arr = []
+for i in range(n):
+    arr.append(int(input()))
+n = len(arr)
+
+def reverseArray( arr , i, n):
+    if i >=n//2:
+        return
+    arr[i] , arr[n-i-1] = arr[n-i-1] , arr[i]
+    reverseArray(arr, i+1 , n)
+    return arr
+out = reverseArray(arr , 0,n)
+print(out)
