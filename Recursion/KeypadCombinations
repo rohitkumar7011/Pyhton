@@ -1,0 +1,75 @@
+# This function is  just appending into the list and returning the list...
+
+
+def getDigit(d):
+    if d == 2:
+        return "abc"
+    if d == 3:
+        return "def"
+    if d ==4:
+        return "ghi"
+    if d == 5:
+        return "jkl"
+    if d == 6:
+        return "mno"
+    if d == 7:
+        return "pqrs"
+    if d == 8:
+        return "tuv"
+    if d == 9:
+        return "wxyz"
+
+
+
+def subs(S):
+    if S==0:
+        output = []
+        output.append("")
+        return output
+    smallerInt  = S//10
+    remainingInt = S%10
+
+    smalleroutput = subs(smallerInt)
+    optionForLastDigit = getDigit(remainingInt)
+    out = []
+    for sub in smalleroutput:
+        for s in optionForLastDigit:
+            out.append(sub + s)
+    return out
+out = subs(23)
+print(out)
+
+
+
+
+output : ['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']
+
+
+
+###############################################################################################################
+# This fact function just print the factorial of a number and returns nothing..
+
+def subs(S, O):
+    if S==0:
+        print(O)
+        return
+    smallnumber = S//10
+    remainingInt = S%10
+    optionForLastDigit = getDigit(remainingInt)
+
+    for sub in optionForLastDigit:
+        newOutput = sub + O
+        subs(smallnumber,newOutput)
+out = subs(23, '')
+
+
+out : 
+ad
+bd
+cd
+ae
+be
+ce
+af
+bf
+cf

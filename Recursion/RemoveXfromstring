@@ -11,4 +11,7 @@ def str(s,a):
         return s[0] + out
 
 out = str("xaxb","x")
-print(out)
+print(out
+
+
+# out : ab

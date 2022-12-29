@@ -5,3 +5,15 @@ def fact(n):
     return n*fact(n-1)
 out = fact(n)
 print(out)
+
+###################################################################################3
+# This fact function just print the factorial of a number and returns nothing..
+def fact(n,ans=1):
+    if n == 0:
+        print(ans)
+        return
+    
+    ans = ans * n
+    fact(n-1,ans)
+
+out = fact(5)

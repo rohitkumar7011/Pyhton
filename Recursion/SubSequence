@@ -1,0 +1,39 @@
+def subs(S):
+    if len(S)==0:
+        output = []
+        output.append("")
+        return output
+    smalleroutput = subs(S[1:])
+    out = []
+    for sub in smalleroutput:
+        out.append(sub)
+        out.append(S[0] + sub)
+    return out
+out = subs("abcd")
+print(out)
+
+# out : ['', 'a', 'b', 'ab', 'c', 'ac', 'bc', 'abc', 'd', 'ad', 'bd', 'abd', 'cd', 'acd', 'bcd', 'abcd']
+
+
+
+###############################################################################################################
+# This fact function just print the factorial of a number and returns nothing..
+
+def PrintSubs(S,O):
+    if len(S) == 0:
+        print(O)
+        return
+    NotIncluded = PrintSubs(S[1:], O)
+    new = O + S[0]
+    inlcuded = PrintSubs(S[1:], new)
+
+out = PrintSubs("abc", '')
+
+# out :
+c
+b
+bc
+a
+ac
+ab
+abc
