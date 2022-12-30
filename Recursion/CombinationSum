@@ -1,0 +1,20 @@
+candidates = [2,3,6,7]
+target = 7
+ans = []
+
+def findCombinations(index, arr, target, ans, out):
+    if index == len(arr):
+        if target == 0:
+            ans.append(list(out))
+        return
+    if arr[index] <= target:
+        out.append(arr[index])
+        findCombinations(index, arr, target - arr[index], ans, out)
+        out.remove(arr[index])
+    findCombinations(index + 1, arr, target, ans, out)
+    return ans
+out = findCombinations(0, candidates, target, ans, out=[])
+print(out)
+
+
+# out :[[2, 2, 3], [7]]
